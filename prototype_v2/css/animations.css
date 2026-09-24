@@ -1,0 +1,175 @@
+html.js .page-load {
+  opacity: 0;
+  transform: translateY(0.8rem);
+}
+
+html.js .page-load.is-loaded {
+  animation: page-rise 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--delay-0, 0ms);
+}
+
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+}
+
+html.js .reveal.is-visible {
+  animation: reveal-rise 650ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--delay-0, 0ms);
+}
+
+html.js .delivery-trace.reveal {
+  transform: translateY(1.5rem) rotate(0.35deg);
+}
+
+html.js .delivery-trace.reveal.is-visible {
+  animation-name: panel-arrive;
+}
+
+html.js .service-row.reveal:hover,
+html.js .timeline-item.reveal:hover,
+html.js .plan-actions.reveal:hover {
+  animation-play-state: paused;
+}
+
+html.js .reveal-delay-1 {
+  --delay-1: 90ms;
+}
+
+html.js .reveal-delay-2 {
+  --delay-2: 180ms;
+}
+
+html.js .reveal-delay-3 {
+  --delay-3: 270ms;
+}
+
+html.js .reveal-delay-4 {
+  --delay-4: 360ms;
+}
+
+html.js .is-visible.reveal-delay-1,
+html.js .is-visible.reveal-delay-2,
+html.js .is-visible.reveal-delay-3,
+html.js .is-visible.reveal-delay-4 {
+  animation-delay: var(--delay-1, var(--delay-2, var(--delay-3, var(--delay-4, 0ms))));
+}
+
+.status-dot,
+.trace-node-active .node-mark {
+  animation: signal-pulse 2.8s ease-in-out infinite;
+}
+
+.page-field::before,
+.page-field::after {
+  animation: field-breathe 14s ease-in-out infinite alternate;
+}
+
+.noise {
+  animation: grain-shift 0.7s steps(2, end) infinite;
+}
+
+@keyframes page-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.8rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes panel-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem) rotate(0.35deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0.35deg);
+  }
+}
+
+@keyframes signal-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.68;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes field-breathe {
+  from {
+    opacity: 0.14;
+    transform: scaleY(0.94);
+  }
+  to {
+    opacity: 0.28;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes grain-shift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(-0.3%, 0.2%, 0);
+  }
+  50% {
+    transform: translate3d(0.2%, -0.3%, 0);
+  }
+  75% {
+    transform: translate3d(0.3%, 0.1%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .page-load,
+  html.js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  html.js .delivery-trace.reveal,
+  html.js .delivery-trace.reveal.is-visible {
+    transform: rotate(0.35deg);
+  }
+
+  .status-dot,
+  .trace-node-active .node-mark,
+  .page-field::before,
+  .page-field::after,
+  .noise {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
