@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+  <meta name="description" content="Custom AI automation, VPS setup, and execution blueprints for Indonesian teams." />
+  <meta property="og:title" content="agenticindonesia.run.place" />
+  <meta property="og:description" content="Custom AI automation, VPS setup, and execution blueprints. Free Discord consultation." />
+  <meta property="og:type" content="website" />
+
+  <title>agenticindonesia.run.place — Automation that ships, not stalls</title>
+
+  <!-- Geist + Geist Mono via Vercel CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+</head>
+<body>
+  <div class="bg-mesh"></div>
+  <div class="noise-overlay"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================================
+       NAV
+       ============================================ -->
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="/" class="nav__brand" aria-label="agenticindonesia home">
+        <span class="nav__brand-mark" aria-hidden="true">AI</span>
+        <span>agenticindonesia</span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#process" data-i18n="nav.process">Process</a></li>
+          <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="btn btn--ghost btn--sm" data-lang-toggle aria-label="Toggle language">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span data-lang-label>EN</span>
+        </button>
+        <button class="btn btn--ghost btn--sm" data-theme-toggle aria-label="Toggle theme">
+          <svg class="theme-icon-light" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a class="btn btn--secondary btn--sm hidden md:flex" href="https://discord.gg/" target="_blank" rel="noopener noreferrer" data-i18n="nav.discord">Join Discord</a>
+        <button class="btn btn--ghost btn--sm" data-nav-toggle aria-expanded="false" aria-label="Menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="container" data-nav-menu hidden style="display:none;">
+      <ul style="list-style:none;padding:0 0 1rem;display:flex;flex-direction:column;gap:.75rem;">
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#process" data-i18n="nav.process">Process</a></li>
+        <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li><a class="btn btn--secondary btn--sm" href="https://discord.gg/" target="_blank" rel="noopener noreferrer" data-i18n="nav.discord">Join Discord</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================================
+         HERO
+         ============================================ -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div>
+            <span class="badge badge--accent">
+              <span style="width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;"></span>
+              <span data-i18n="hero.eyebrow">Custom AI & automation, done for you</span>
+            </span>
+            <h1 class="hero__title" style="margin-top:1rem;" data-i18n="hero.title">Automation that <em>ships</em>, not stalls.</h1>
+            <p class="hero__sub" data-i18n="hero.sub">We design, deploy, and run AI agents and automation pipelines tailored to your business — or hand you a clean blueprint so you can build it yourself.</p>
+            <div class="hero__cta">
+              <a class="btn btn--primary btn--lg" href="#contact" data-i18n="hero.cta.primary">Book a free consult</a>
+              <a class="btn btn--secondary btn--lg" href="#pricing" data-i18n="hero.cta.secondary">See pricing</a>
+            </div>
+            <div class="hero__meta">
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span data-i18n="hero.meta.a">Free consult on Discord</span>
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+                <span data-i18n="hero.meta.b">EN · ID</span>
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span data-i18n="hero.meta.c">No lock-in</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Terminal mockup -->
+          <div class="terminal" aria-hidden="true">
+            <div class="terminal__bar">
+              <span class="terminal__dot"></span>
+              <span class="terminal__dot"></span>
+              <span class="terminal__dot"></span>
+              <span class="terminal__title" data-i18n="terminal.title">agenticindonesia — ~/</span>
+            </div>
+            <div class="terminal__body">
+              <div><span class="prompt" data-i18n="terminal.prompt.1">$ deploy automation/chat-bot.yml</span></div>
+              <div><span class="comment" data-i18n="terminal.comment.1"># provisioning VPS (Singapore, 2 vCPU, 4GB)…</span></div>
+              <div><span class="output" data-i18n="terminal.output.1">✓ VPS ready · 142s</span></div>
+              <div style="margin-top:.5rem;"><span class="prompt" data-i18n="terminal.prompt.2">$ link client-whatsapp --tier hybrid</span></div>
+              <div><span class="output" data-i18n="terminal.output.2">✓ blueprint synced · runbook published</span></div>
+              <div style="margin-top:.5rem;"><span class="prompt" data-i18n="terminal.prompt.3">$ ship</span></div>
+              <div><span class="output" data-i18n="terminal.output.3">✓ live · 1,247 conversations handled</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SERVICES
+         ============================================ -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="stack stack-lg">
+          <div style="max-width:48rem;">
+            <span class="eyebrow" data-i18n="services.eyebrow">What we do</span>
+            <h2 data-i18n="services.title">Three ways we work together.</h2>
+            <p class="lead" data-i18n="services.sub">Pick the engagement that fits your team. Mix and match — most clients start with one and grow.</p>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card">
+              <div class="card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+              </div>
+              <h3 class="card__title" data-i18n="services.s1.title">Subscription</h3>
+              <p class="card__body" data-i18n="services.s1.body">We run your automation end-to-end on managed VPS. You focus on the business; we handle uptime, scaling, and iteration.</p>
+            </article>
+
+            <article class="card">
+              <div class="card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+              </div>
+              <h3 class="card__title" data-i18n="services.s2.title">Blueprint only</h3>
+              <p class="card__body" data-i18n="services.s2.body">We design the architecture, write the runbook, and hand it off. Your team executes on your own infrastructure.</p>
+            </article>
+
+            <article class="card">
+              <div class="card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M3 12h18"/></svg>
+              </div>
+              <h3 class="card__title" data-i18n="services.s3.title">Hybrid</h3>
+              <p class="card__body" data-i18n="services.s3.body">Best of both — we build the foundation and stay on call for the parts you don't want to operate yourself.</p>
+            </article>
+
+            <article class="card" style="grid-column:1/-1;">
+              <div class="flex items-center gap-md" style="flex-wrap:wrap;">
+                <div class="card__icon" style="margin-bottom:0;flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </div>
+                <div style="flex:1;min-width:240px;">
+                  <h3 class="card__title" data-i18n="services.s4.title">VPS consult</h3>
+                  <p class="card__body" data-i18n="services.s4.body">Need help picking the right VPS, region, or stack? Free 30-minute slot on Discord. No upsell.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider container" />
+
+    <!-- ============================================
+         PROCESS
+         ============================================ -->
+    <section id="process" class="section">
+      <div class="container">
+        <div class="stack stack-lg">
+          <div style="max-width:48rem;">
+            <span class="eyebrow" data-i18n="process.eyebrow">How we work</span>
+            <h2 data-i18n="process.title">From kickoff to ship in 14 days.</h2>
+            <p class="lead" data-i18n="process.sub">A predictable rhythm. Weekly checkpoints, no surprises.</p>
+          </div>
+
+          <div style="max-width:48rem;">
+            <div class="process-step">
+              <div class="process-step__num">01</div>
+              <div>
+                <h3 class="process-step__title" data-i18n="process.p1.title">Discovery & scoping</h3>
+                <p class="process-step__body" data-i18n="process.p1.body">We dig into your workflow, the data you touch, and the friction you feel. Output: a one-page scope and a clear yes/no on whether automation is the right move.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num">02</div>
+              <div>
+                <h3 class="process-step__title" data-i18n="process.p2.title">Architecture & blueprint</h3>
+                <p class="process-step__body" data-i18n="process.p2.body">We design the system — VPS specs, integration points, failure modes. You approve before any code is written.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num">03</div>
+              <div>
+                <h3 class="process-step__title" data-i18n="process.p3.title">Build & test</h3>
+                <p class="process-step__body" data-i18n="process.p3.body">We implement, run end-to-end tests against your real data (anonymized), and tune the agent prompts until the metrics hold.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num">04</div>
+              <div>
+                <h3 class="process-step__title" data-i18n="process.p4.title">Ship & support</h3>
+                <p class="process-step__body" data-i18n="process.p4.body">Cutover, monitoring, and a 30-day hypercare window. If you picked subscription, we keep it running.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider container" />
+
+    <!-- ============================================
+         PRICING
+         ============================================ -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="stack stack-lg">
+          <div style="max-width:48rem;">
+            <span class="eyebrow" data-i18n="pricing.eyebrow">Pricing</span>
+            <h2 data-i18n="pricing.title">Honest pricing. Indonesian-market aware.</h2>
+            <p class="lead" data-i18n="pricing.sub">Three tiers. No hidden fees, no usage surprises. Cancel any time on subscription.</p>
+          </div>
+
+          <div class="grid grid-3">
+            <!-- Starter -->
+            <article class="card card--pricing">
+              <span class="badge" data-i18n="pricing.p1.tag">One-time</span>
+              <h3 class="card__title" style="margin-top:.75rem;" data-i18n="pricing.p1.name">Starter</h3>
+              <div><span class="price" data-i18n="pricing.p1.price">Rp 4.500.000</span></div>
+              <div class="price-note" data-i18n="pricing.p1.note">one-time setup fee</div>
+              <ul>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.p1.f1">VPS provisioning & hardening</span></li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.p1.f2">1 automation pipeline</span></li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.p1.f3">Documentation & handoff</span></li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.p1.f4">14-day post-launch support</span></li>
+              </ul>
+              <a href="#contact" class="btn btn--secondary mt-md" data-i18n="pricing.p1.cta">Get started</a>
+            </article>
+
+            <!-- Pro (featured) -->
+            <article class="card card--pricing featured">
+              <span class="badge badge--accent" data-i18n="pricing.p2.tag">Monthly</span>
+              <h3 class="card__title" style="margin-top:.75rem;" data-i18n="pricing.p2.name">Pro</h3>
+              <div><span class="price" data-i18n="pricing.p2.price">Rp 1.800.000</span><span class="price-unit">/bln</span></div>
+              <div class="price-note" data-i18n="pricing.p2.note">per month, billed monthly</div>
+              <ul>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.p2.f1">Up to 3 automation pipelines</span></li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.p2.f2">Managed VPS (we run it)</span></li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.p2.f3">Weekly iteration calls</span></li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.p2.f4">24h response SLA</span></li>
+              </ul>
+              <a href="#contact" class="btn btn--primary mt-md" data-i18n="pricing.p2.cta">Start subscription</a>
+            </article>
+
+            <!-- Blueprint -->
+            <article class="card card--pricing">
+              <span class="badge" data-i18n="pricing.p3.tag">One-time</span>
+              <h3 class="card__title" style="margin-top:.75rem;" data-i18n="pricing.p3.name">Blueprint</h3>
+              <div><span class="price" data-i18n="pricing.p3.price">Rp 2.500.000</span></div>
+              <div class="price-note" data-i18n="pricing.p3.note">DIY, you execute</div>
+              <ul>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.p3.f1">Full architecture design</span></li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.p3.f2">Step-by-step runbook</span></li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.p3.f3">Code templates & configs</span></li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.p3.f4">Two review sessions</span></li>
+              </ul>
+              <a href="#contact" class="btn btn--secondary mt-md" data-i18n="pricing.p3.cta">Request blueprint</a>
+            </article>
+          </div>
+
+          <p class="text-subtle" style="font-size:var(--text-sm);text-align:center;" data-i18n="pricing.p4.note">VPS-only consult is free on Discord — no booking needed.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider container" />
+
+    <!-- ============================================
+         FAQ
+         ============================================ -->
+    <section class="section">
+      <div class="container">
+        <div style="max-width:48rem;margin-inline:auto;">
+          <div class="stack stack-lg">
+            <div>
+              <span class="eyebrow" data-i18n="faq.eyebrow">FAQ</span>
+              <h2 data-i18n="faq.title">Common questions, answered straight.</h2>
+            </div>
+
+            <div class="faq">
+              <details>
+                <summary data-i18n="faq.q1.q">Do you only work with Indonesian clients?</summary>
+                <p class="faq__answer" data-i18n="faq.q1.a">No. We work in English and Bahasa Indonesia.</p>
+              </details>
+              <details>
+                <summary data-i18n="faq.q2.q">What if my automation needs grow over time?</summary>
+                <p class="faq__answer" data-i18n="faq.q2.a">That's normal. Subscription tier can scale.</p>
+              </details>
+              <details>
+                <summary data-i18n="faq.q3.q">What stack do you use?</summary>
+                <p class="faq__answer" data-i18n="faq.q3.a">Pragmatically. We pick tools that fit the job.</p>
+              </details>
+              <details>
+                <summary data-i18n="faq.q4.q">How is my data handled?</summary>
+                <p class="faq__answer" data-i18n="faq.q4.a">We sign DPAs, never train on your data.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CTA
+         ============================================ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div style="max-width:48rem;margin-inline:auto;text-align:center;">
+          <div class="stack stack-md">
+            <h2 data-i18n="cta.title">Ready to stop maintaining, start shipping?</h2>
+            <p class="lead" style="margin-inline:auto;" data-i18n="cta.sub">Drop into the Discord — first consult is free.</p>
+            <div class="flex gap-md items-center justify-between" style="justify-content:center;flex-wrap:wrap;">
+              <a class="btn btn--primary btn--lg" href="https://discord.gg/" target="_blank" rel="noopener noreferrer" data-i18n="cta.primary">Join Discord</a>
+              <a class="btn btn--secondary btn--lg" href="mailto:hello@agenticindonesia.run.place" data-i18n="cta.secondary">Email us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="nav__brand" style="margin-bottom:.75rem;">
+            <span class="nav__brand-mark" aria-hidden="true">AI</span>
+            <span>agenticindonesia</span>
+          </div>
+          <p class="text-subtle" style="max-width:32ch;" data-i18n="footer.tag">Custom AI & automation for teams that ship.</p>
+        </div>
+
+        <div>
+          <h6 class="footer__title" data-i18n="footer.product">Product</h6>
+          <ul class="footer__links">
+            <li><a href="#services" data-i18n="footer.product.s">Services</a></li>
+            <li><a href="#pricing" data-i18n="footer.product.p">Pricing</a></li>
+            <li><a href="#process" data-i18n="footer.product.c">Process</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h6 class="footer__title" data-i18n="footer.company">Company</h6>
+          <ul class="footer__links">
+            <li><a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" data-i18n="footer.company.d">Discord community</a></li>
+            <li><a href="mailto:hello@agenticindonesia.run.place" data-i18n="footer.company.e">Email</a></li>
+            <li><span class="text-subtle" data-i18n="footer.company.b">Blog (coming soon)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span data-i18n="footer.legal">© 2026 agenticindonesia.run.place · Built in Indonesia</span>
+        <span data-i18n="footer.region">Region: Asia/Singapore · Response: 24h</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
