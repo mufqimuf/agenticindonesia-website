@@ -738,8 +738,8 @@ code {
   position: fixed;
   inset: 0;
   z-index: -2;
-  background: radial-gradient(circle at 10% 40%, rgba(16, 185, 129, 0.05), transparent 45%),
-              radial-gradient(circle at 90% 60%, rgba(5, 150, 105, 0.03), transparent 45%);
+  background: radial-gradient(circle at 10% 40%, rgba(16, 185, 129, 0.15), transparent 45%),
+              radial-gradient(circle at 90% 60%, rgba(5, 150, 105, 0.10), transparent 45%);
   filter: blur(80px);
   animation: mesh-flow 12s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
   pointer-events: none;
@@ -765,7 +765,13 @@ code {
 }
 
 /* Base Reveal Class (Staggered Entrance) */
-.reveal {
+.reveal, .section, .hero__inner > div, .card, .faq details {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition: opacity 800ms cubic-bezier(0.23, 1, 0.32, 1), transform 800ms cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: opacity, transform;
+}
+.reveal-init {
   opacity: 0;
   transform: translateY(16px) scale(0.98);
   transition: opacity 600ms cubic-bezier(0.23, 1, 0.32, 1), transform 600ms cubic-bezier(0.23, 1, 0.32, 1);

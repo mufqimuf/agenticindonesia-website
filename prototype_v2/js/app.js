@@ -375,50 +375,31 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ==========================================================================
    v2: Scroll Reveal Observer for Element Animation
    ========================================================================== */
-function initScrollReveal() {
-  // Target items that need staggered or single entrance animation
-  const sections = document.querySelectorAll('.section, .hero, .terminal-window');
-  const cards = document.querySelectorAll('.card');
-  const faqs = document.querySelectorAll('.faq details');
-  
-  // Inject classes programmatically so HTML doesn't look messy
-  document.querySelectorAll('.hero__inner > div').forEach(el => el.classList.add('reveal'));
-  
-  sections.forEach((el, index) => {
-    el.classList.add('reveal');
-  });
-  
-  cards.forEach((el, index) => {
-    el.classList.add('reveal');
-    let delay = (index % 3) + 1;
-    el.classList.add(`reveal-delay-${delay}`);
-  });
 
-  faqs.forEach((el, index) => {
-    el.classList.add('reveal');
-    let delay = (index % 4) + 1;
-    el.classList.add(`reveal-delay-${delay}`);
-  });
+function initScrollReveal() {
+  const elements = document.querySelectorAll('.section, .hero__inner > div, .card, .faq details');
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        // Unobserve after showing the first time for better performance
         observer.unobserve(entry.target);
       }
     });
   }, {
     root: null,
-    rootMargin: '0px 0px -50px 0px', // Trigger slightly before it hits bottom of viewport
-    threshold: 0.05
+    rootMargin: '0px 0px -20px 0px',
+    threshold: 0.1
   });
 
-  document.querySelectorAll('.reveal').forEach(el => {
+  elements.forEach((el, index) => {
+    // Add staggered delay inline for cards and faqs
+    if (el.classList.contains('card')) {
+      el.style.transitionDelay = `${(index % 3) * 100}ms`;
+    }
     observer.observe(el);
   });
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize scroll effects
   setTimeout(initScrollReveal, 150);
