@@ -59,26 +59,6 @@ agenticindonesia-website/
 - **Accessibility** — Semantic HTML, keyboard navigation, skip links
 - **Performance** — No JavaScript frameworks, minimal dependencies
 
-## 🚀 Development
-
-```bash
-# Clone the repository
-git clone https://github.com/mufqimuf/agenticindonesia-website.git
-cd agenticindonesia-website/prototype_v2
-
-# Open in browser (simple server)
-python3 -m http.server 8080
-# Then visit http://localhost:8080
-```
-
-## 🔧 Deployment
-
-The site is deployed via GitHub Actions CI/CD pipeline:
-
-1. Push to `master` branch
-2. CI/CD pipeline syncs files to VPS
-3. Caddy serves the static files with SSL
-
 ## 👥 Team
 
 - **M.Harits** — Founder & Lead Developer
