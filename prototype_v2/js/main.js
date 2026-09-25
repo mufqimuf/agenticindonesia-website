@@ -328,7 +328,7 @@ const i18n = {
   const systemTheme = window.matchMedia?.("(prefers-color-scheme: dark)");
   const allowedThemes = new Set(["dark", "light"]);
   const allowedLanguages = new Set(["en", "id"]);
-  const htmlKeys = new Set(["hero.title"]);
+  const htmlKeys = new Set(["hero.title", "pricing.p1.cta", "pricing.p2.cta", "pricing.p3.cta"]);
   const storage = {
     get(key) {
       try {
